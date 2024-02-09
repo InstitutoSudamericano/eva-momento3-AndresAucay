@@ -31,12 +31,12 @@ class CharactersService {
             characters.description?.takeIf { it.trim().isNotEmpty() }
                 ?: throw Exception("Descripcion no debe ser vacio")
 
-            // Calcular el costo total de los personajes
+            /*Calcular el costo total de los personajes
             val scene = sceneRepository.findById(characters.sceneId)
-            val currentTotalCost = charactersRepository.sumCostBySceneId(characters.sceneId!!) ?: 0.0
-            /*
+            val costoTotal = charactersRepository.sumCostBySceneId(characters.sceneId!!) ?: 0.0
+
             if (scene != null) {
-                if (currentTotalCost + (characters.cost ?: 0.0) > (scene.budget ?: 0.0)) {
+                if (costoTotal + (characters.cost ?: 0.0) > (scene.budget ?: 0.0)) {
                     throw Exception("El costo total de los personajes excede el presupuesto de la escena")
                 }
             }*/

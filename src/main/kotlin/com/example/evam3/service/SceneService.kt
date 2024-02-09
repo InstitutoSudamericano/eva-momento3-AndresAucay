@@ -38,10 +38,10 @@ class SceneService {
 
             // Verificar si el total de minutos excede
             val films = filmRepository.findById(scene.filmId)
-            val currentTotalCost = sceneRepository.sumMinutesByFilmId(scene.filmId!!) ?: 0
+            val costTotal = sceneRepository.sumMinutesByFilmId(scene.filmId!!) ?: 0
 
             if (films != null) {
-                if (currentTotalCost + (scene.minutes ?: 0) > (film.duration ?: 0)) {
+                if (costTotal + (scene.minutes ?: 0) > (film.duration ?: 0)) {
                     throw Exception("El total de minutos excede la duración de la película")
                 }
             }
