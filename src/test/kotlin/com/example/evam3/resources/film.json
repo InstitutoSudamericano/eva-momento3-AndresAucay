@@ -1,0 +1,8 @@
+{
+  "title": "Your Film Title",
+  "director": "Director Name",
+  "duration": 120,
+  "calification": 10,
+  "gender": "Action",
+  "investment": 5000000
+}
